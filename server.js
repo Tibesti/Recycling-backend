@@ -6,12 +6,12 @@ const mysql = require('mysql');
 const nodemailer = require('nodemailer');
 
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "tobiloba123",
-    database:"recycle_db"
+    host: 'localhost',
+    user: 'smarkxgd_tibesti',
+    password: 'tobiloba123@#',
+    database:'smarkxgd_tibesti'
   });
-  
+   
   con.connect(function(err) {
     if (err) throw err;
     console.log("Connected to Database!"); 
