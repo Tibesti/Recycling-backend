@@ -80,8 +80,8 @@ app.post('/contact', (req,res) => {
         port: 465,
         secure: true,
         auth: {
-          user: 'tobilobaolugbemi@gmail.com',
-          pass: 'tobiloba123'
+          user: env.EMAIL_NAME,
+          pass: env.EMAIL_PASSWORD
         },
         tls: {
             rejectUnauthorized: false //this helped with one certificate authorization problem related to google
@@ -89,7 +89,7 @@ app.post('/contact', (req,res) => {
     })
     const mailOpts = {
         from: `${name}`, // This is ignored by Gmail
-        to: `tobilobaolugbemi@gmail.com`,
+        to: env.EMAIL_PASSWORD,
         subject: 'New message from contact form at tylerkrys.ca',
         text: `${name} (${email}, ${phone}) says: ${message}`
     }
